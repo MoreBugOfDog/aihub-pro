@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "config/webpack/generated",
+    "moduleResolution": "node",
+    "types": [
+      "webpack",
+      "vue",
+      "node"
+    ],
+    "baseUrl": "."
+  },
+  "include": [
+    "./config/webpack/**/*.ts"
+  ]
+}

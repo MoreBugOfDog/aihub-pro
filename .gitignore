@@ -1,0 +1,11 @@
+# module stores
+node_modules
+
+# lockfile
+package-lock.json
+yarn.lock
+
+# compiling results
+dist
+generated
+lib

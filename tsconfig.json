@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "isolatedModules": true,
+        "types": [
+            "webpack",
+            "vue",
+            "node"
+        ],
+        "paths": {
+            "@framework/*": [
+                "./src/fs-context/*"
+            ],
+            "@src/*": [
+                "./src/*"
+            ],
+            "@config/*": [
+                "./config/*"
+            ],
+            "@samples/*": [
+                "./src/fs-context/samples/*"
+            ],
+            "@components/*": [
+                "./src/fs-context/ui/components/*"
+            ],
+        },
+        "baseUrl": "."
+    },
+    "include": [
+        "./src/**/*.ts",
+        "./config/**/*.ts",
+        "./src/**/*.vue"
+    ]
+}
