@@ -1,0 +1,33 @@
+{
+  "name": "scratch-ext",
+  "version": "1.0.0",
+  "description": "Scaffolding for Javascript/Typescript Scratch extensions",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src",
+    "lint:type": "tsc --noEmit -p ./tsconfig.json",
+    "fix": "eslint ./src --fix",
+    "start": "concurrently \"http-server ./dist -p 8080 --cors\" \"nodemon\"",
+    "build": "tsup src/withL10n.ts",
+    "build:turbowarp": "tsup src/index.ts && (npx prettier --config turbowarp/.prettierrc --parser acorn < dist/index.global.js) > dist/index.global.formatted.js && rimraf dist/index.global.js",
+    "format": "prettier ./src -c -w",
+    "lint:format": "prettier ./src -c"
+  },
+  "author": "FurryR",
+  "license": "MIT",
+  "devDependencies": {
+    "@turbowarp/types": "^0.0.12",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.17.0",
+    "http-server": "^14.1.1",
+    "prettier": "^3.4.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
